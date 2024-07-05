@@ -1,11 +1,12 @@
-import React from "react";
-
+import Home from "./pages/Home/Home";
 import "./App.css";
 
-function Home() {
-    const [count, setCount] = React.useState(0);
-    setCount(1);
-    return <>{count}</>;
+function App() {
+    return (
+        <div>
+            <Home />
+        </div>
+    );
 }
 
-export default Home;
+export default App;

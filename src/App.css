@@ -1,10 +1,15 @@
 #root {
     max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+    /* margin: 0 auto; */
+    /* padding: 2rem; */
     text-align: center;
 }
-
+.playwrite-gb-s-bold {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
 .logo {
     height: 6em;
     padding: 1.5em;
