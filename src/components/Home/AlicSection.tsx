@@ -1,4 +1,11 @@
+import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 export default function AlicSection() {
+    const navigate = useNavigate();
+    function push_alec_console() {
+        // Navigate to the desired route
+        navigate('/alec_console');
+    }
     return (
         <div>
             <section className="lg:w-[100vw]" id="feature">
@@ -210,10 +217,13 @@ export default function AlicSection() {
                         </div>
                     </div>
                 </div>
+                <Button className="lg:mt-20 lg:h-10  lg:w-60 w-40 mt-10 lg:text-xl" onClick={push_alec_console}>
+                    Try Alec
+                </Button>
             </section>
             <section className="w-[100vw] mt-40 mb-40" id="alecwork">
                 <h2 className="mb-4 lg:text-7xl text-4xl font-extrabold text-gray-900 dark:text-white">
-                    How <span className="text-purple-500">Alic</span> Works
+                    How <span className="text-purple-500">Alec</span> Works
                 </h2>
                 <p className="text-gray-500 sm:text-xl dark:text-gray-400 font-bold lg:mt-8">
                     Let’s Take a Sneak Peek: How Alec Completes Your Tasks
@@ -304,6 +314,9 @@ export default function AlicSection() {
                         </div>
                     </li>
                 </ol>
+                <Button className="lg:mt-20 lg:h-10  lg:w-60 w-40 mt-10 lg:text-xl" onClick={push_alec_console}>
+                    Try Alec
+                </Button>
             </section>
         </div>
     );
