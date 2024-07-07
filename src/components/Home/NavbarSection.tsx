@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useNavigate } from 'react-router-dom';
 import {  scroller } from "react-scroll";
 import { Menu } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -8,7 +9,6 @@ import { Separator } from "@/components/ui/separator";
 import {
     Drawer,
     DrawerContent,
-    DrawerDescription,
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
@@ -29,6 +29,11 @@ export default function NavbarSection() {
             smooth: "easeInOutQuart",
         });
     };
+    const navigate = useNavigate();
+    function push_alec_console() {
+        // Navigate to the desired route
+        navigate('/alec_console');
+    }
     return (
         <div className="w-full">
             <div className="flex lg:ml-32 lg:mt-6 items-center lg:justify-between">
@@ -85,83 +90,22 @@ export default function NavbarSection() {
                         </NavigationMenuItem>
                     </NavigationMenuList>
                 </NavigationMenu>
-                <div className="hidden md:block ml-60 lg:block">
+                <div className="hidden md:block ml-40 lg:block">
                     <ModeToggle />
                 </div>
-                <Button className="ml-4 hidden lg:block">Get Started</Button>
+                <Button className="ml-4 hidden lg:block" onClick={push_alec_console}>Signup</Button>
+                <Button className="ml-4 hidden lg:block" onClick={push_alec_console}>Login</Button>
                 <Drawer>
                     <DrawerTrigger className="md:hidden lg:hidden ml-[14rem] mt-4">
                         <Menu />
                     </DrawerTrigger>
                     <DrawerContent>
                         <DrawerHeader>
-                            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                            <DrawerDescription>
-                                This action cannot be undone.
-                            </DrawerDescription>
+                            <DrawerTitle>Get Started With Us</DrawerTitle>
+
                         </DrawerHeader>
-                        <NavigationMenu>
-                            <NavigationMenuList className="block ml-3">
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() => scrollToSection("home")}
-                                    >
-                                        Home
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() =>
-                                            scrollToSection("feature")
-                                        }
-                                    >
-                                        Features
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() =>
-                                            scrollToSection("pricing")
-                                        }
-                                    >
-                                        Pricing
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() =>
-                                            scrollToSection("aboutalec")
-                                        }
-                                    >
-                                        About Alec
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() =>
-                                            scrollToSection("alecwork")
-                                        }
-                                    >
-                                        How It Works
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                                <NavigationMenuItem>
-                                    <NavigationMenuTrigger
-                                        className="w-[22rem]"
-                                        onClick={() =>
-                                            scrollToSection("footer")
-                                        }
-                                    >
-                                        Contact Us
-                                    </NavigationMenuTrigger>
-                                </NavigationMenuItem>
-                            </NavigationMenuList>
-                        </NavigationMenu>
+                        <Button className=" w-40 m-auto mb-4  mt-4 lg:block" onClick={push_alec_console}>Signup</Button>
+                        <Button className="  w-40 m-auto mb-4    lg:block" onClick={push_alec_console}>Login</Button>
                         <DrawerFooter>
                             <ModeToggle />
                         </DrawerFooter>

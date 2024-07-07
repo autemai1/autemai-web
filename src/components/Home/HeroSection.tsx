@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 export default function HeroSection() {
+    const navigate = useNavigate();
+    function push_alec_console() {
+        // Navigate to the desired route
+        navigate('/alec_console');
+    }
     return (
         <div className="md:ml-1 " id="home">
             <HeroHighlight>
@@ -18,24 +24,45 @@ export default function HeroSection() {
                         duration: 0.5,
                         ease: [0.4, 0.0, 0.2, 1],
                     }}
-                    className="  lg:ml-0  text-xl  lg:text-7xl font-bold text-neutral-700 dark:text-white  lg:leading-snug lg:
+                    className="  lg:ml-0  text-2xl mb-2 ml-2 lg:text-7xl font-bold text-neutral-700 dark:text-white  lg:leading-snug lg:
         text-center lg:mx-auto "
                 >
                     Autem AI
-                    <Highlight className="text-black ml-2  lg:ml-6  dark:text-white">
-                        Your Autonomous Employee
-                    </Highlight>
+                  
                 </motion.h1>
+                <motion.h1
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                    }}
+                    transition={{
+                        duration: 0.5,
+                        ease: [0.4, 0.0, 0.2, 1],
+                    }}
+                    className="  lg:ml-0  text-xl  lg:text-7xl font-bold text-neutral-700 dark:text-white  lg:leading-snug lg:
+        text-center lg:mx-auto "
+                >
+                       <Highlight className="text-black ml-7  lg:ml-6  dark:text-white">
+                        Your Autonomous AI Employee
+                    </Highlight>
+                  
+                </motion.h1>
+             
                 <p className="  md:text-5xl text-lg  md:mt-10 mt-6 dark:text-neutral-200 ">
                     {" "}
                     Automate your tasks with Autem AI
                 </p>
-                <Button className="lg:mt-20 lg:h-10  lg:w-60 w-40 mt-10 bg-[#e11d48] lg:text-xl">
+                <Button className="lg:mt-20 lg:h-10  lg:w-60 w-40 mt-10 lg:text-xl"
+                onClick={push_alec_console}>
                     Get Started
                 </Button>
             </HeroHighlight>
-            <div className="  py-20 md:py-40  w-[100vw]  " id="aboutalec">
-                <h1 className="text-2xl md:text-7xl font-bold mb-12  dark:text-white">
+            <div className="  py-20 md:py-40  w-[100vw]  bg-transparent " id="aboutalec">
+                <h1 className="text-4xl md:text-7xl font-bold mb-12  dark:text-white">
                     Meet <h1 className="  text-purple-500 "> Alec AI </h1> by
                     AuTeM <br />
                 </h1>
@@ -61,6 +88,9 @@ export default function HeroSection() {
                         with a tool that not only meets but anticipates your
                         testing needs.
                     </div>
+                    <Button  className="lg:mt-20 lg:h-10  lg:w-60 w-40 mt-10  lg:text-xl" onClick={push_alec_console}>
+                    Try Alec
+                </Button>
                 </div>
             </div>
         </div>

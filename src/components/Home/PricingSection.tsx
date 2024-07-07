@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 export default function PricingSection() {
+    const navigate = useNavigate();
+    function push_alec_console() {
+        // Navigate to the desired route
+        navigate('/alec_console');
+    }
     return (
         <section className="lg:w-[100vw] mb-40" id="pricing">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="mb-4 lg:text-7xl text-4xl font-extrabold text-gray-900 dark:text-white">
                         Work More With{" "}
-                        <span className="text-purple-500">Alic</span>
+                        <span className="text-purple-500">Alec</span>
                     </h2>
                     <p className="text-gray-500 sm:text-xl dark:text-gray-400 font-bold lg:mt-8">
                         Alec provides a wide range of features to help you work
@@ -48,7 +54,7 @@ export default function PricingSection() {
                                 <span>20 Tasks per month</span>
                             </li>
                         </ul>
-                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">
+                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900" onClick={push_alec_console}>
                             Get started
                         </Button>
                     </div>
@@ -87,7 +93,7 @@ export default function PricingSection() {
                                 <span>50 Tasks per month</span>
                             </li>
                         </ul>
-                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">
+                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900" onClick={push_alec_console}>
                             Get started
                         </Button>
                     </div>
@@ -126,7 +132,7 @@ export default function PricingSection() {
                                 <span>Unlimited Tasks</span>
                             </li>
                         </ul>
-                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">
+                        <Button className="text-white  focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900" onClick={push_alec_console}>
                             Get started
                         </Button>
                     </div>
